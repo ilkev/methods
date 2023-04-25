@@ -6,10 +6,12 @@ public class Main {
         task1();
         task2();
         task3();
-
-
-
     }
+
+
+
+
+//task1
 
 
     public static void printYear(int year) {
@@ -19,7 +21,6 @@ public class Main {
             System.out.println(year + " год не является високосным");
         }
     }
-
     public static void task1() {
         System.out.println("Задание 1");
         Scanner console = new Scanner(System.in);
@@ -30,6 +31,8 @@ public class Main {
 
 
 
+
+//task2
 
 
     public static void printVersionOfApplication(int yearOfRealize, int clientOS) {
@@ -60,6 +63,8 @@ public class Main {
 
 
 
+
+//task3
 
 
     public static void printDeliveryTime(int deliveryDistance) {
