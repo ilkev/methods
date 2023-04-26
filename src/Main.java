@@ -67,28 +67,28 @@ public class Main {
 //task3
 
 
-    public static void printDeliveryTime(int deliveryDistance) {
-        int deliveryTime = 0;
+    public static int DeliveryTime(int deliveryDistance, int deliveryTime) {
+        if (deliveryDistance < 0 || deliveryDistance >= 100) {
+            System.out.println("Доставка не осуществляется");
+        }
         if (deliveryDistance<=20){
-            deliveryTime =deliveryTime +1;
-            System.out.println("для доставки потребуется дней: "+ deliveryTime);
+            deliveryTime = deliveryTime +1;
+
         } else if (deliveryDistance<=60) {
             deliveryTime =deliveryTime +2;
-            System.out.println("для доставки потребуется дней: "+ deliveryTime);
+
         } else if (deliveryDistance<=100){
             deliveryTime =deliveryTime +3;
-            System.out.println("для доставки потребуется дней: "+ deliveryTime);
-        } else {
-            System.out.println("Доставки нет");
+
         }
+        return deliveryTime;
     }
     public static void task3() {
-        System.out.println();
-        System.out.println("Задание 3");
-        System.out.println();
         Scanner console = new Scanner(System.in);
         System.out.println("Введите дистанцию до клиента");
         int deliveryDistance = console.nextInt();
-        printDeliveryTime(deliveryDistance);
+        int deliveryTime = 0;
+        deliveryTime = DeliveryTime(deliveryDistance, deliveryTime);
+        System.out.println("для доставки потребуется дней: "+ deliveryTime);
     }
 }
